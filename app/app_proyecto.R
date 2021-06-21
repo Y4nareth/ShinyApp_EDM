@@ -50,7 +50,7 @@ ui <- fluidPage(
     
     tags$p(),
     useShinyalert(),
-    actionButton("info", "Info", style="color:black;background-color:#02C39A", width = "23.8%"),
+    actionButton("info", tags$strong("Info"), style="color:black;background-color:#90D450", width = "23.8%"),
     tags$p(),
     
     # Sidebar layout with input and output definitions ----
@@ -87,7 +87,7 @@ ui <- fluidPage(
             
             
             #Run button
-            actionButton(inputId = "submit", label = "Run ROC", style="color:black;background-color: #428bca"),
+            actionButton(inputId = "submit", label = "Run ROC", style="color:black;background-color: #0C9FC4"),
             
             # Horizontal line ----
             tags$hr(style = "border-top: 2px solid #000000;"),
@@ -109,7 +109,7 @@ ui <- fluidPage(
             sliderInput("permutations", "Quantity of permutations:" , 0, 5000, 2500),
             
             #Run button
-            actionButton(inputId = "submit_exp", label = "Run Explanations", style="color:black;background-color:#428bca"),
+            actionButton(inputId = "submit_exp", label = "Run Explanations", style="color:black;background-color:#0C9FC4"),
             
             
             
@@ -149,13 +149,10 @@ ui <- fluidPage(
         )
         
     ),
-    
-    
     useShinyjs(),
     extendShinyjs(text = jscode, functions = c("closeWindow")),
-    actionButton("close", "Close window",
-                 style="color:black;background-color:#D54934",#d91111
-                 class="bottomAlign")
+    actionButton("close", tags$strong("Close window"),
+                 style="color:black;background-color:#C53800", width = "23.8%")
     
 )
 
@@ -282,7 +279,7 @@ server <- function(input, output) {
     
     observeEvent(input$info, {
         # Show a modal when the button is pressed
-        shinyalert("Suggestions", mensajeHTML, type = "info", html=TRUE)
+        shinyalert("Suggestions", mensajeHTML, type = "info", html=TRUE, confirmButtonCol="#0C9FC4")
     })
     
 }
