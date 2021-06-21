@@ -109,30 +109,7 @@ ui <- fluidPage(
             sliderInput("permutations", "Quantity of permutations:" , 0, 5000, 2500),
             
             #Run button
-            actionButton(inputId = "submit_exp", label = "Run Explanations", style="color:black;background-color:#0C9FC4"),
-            
-            
-            
-            #sliderInput(inputId = "icost",
-            #            label = "Initial Cost",
-            #            min = 100,
-            #            max = 5000,
-            #            value = 1000),
-            #sliderInput(inputId = "scost",
-            #            label = "Sending Cost",
-            #           min = 0,
-            #            max = 500,
-            #            value = 10),
-            #sliderInput(inputId = "benef",
-            #           label = "Benefit",
-            #            min = 0,
-            #            max = 500,
-            #            value = 20),
-            
-            # Horizontal line ----
-            #tags$hr(),
-            
-            
+            actionButton(inputId = "submit_exp", label = "Run Explanations", style="color:black;background-color:#0C9FC4"),    
             
             
         ),
@@ -271,12 +248,14 @@ server <- function(input, output) {
         
         plot_features(explanation_caret)
     })  
-
+    
+    # Observes if the button Close is clicked
     observeEvent(input$close, {
         js$closeWindow()
         stopApp()
     })
     
+    # Observes if the button Info is clicked
     observeEvent(input$info, {
         # Show a modal when the button is pressed
         shinyalert("Suggestions", mensajeHTML, type = "info", html=TRUE, confirmButtonCol="#0C9FC4")
