@@ -40,7 +40,7 @@ mensajeHTML <- '<p align="left">The uploaded arff or csv files must have the fol
 </ul>
 <p></p>
 <p align="left">In the following link you can find some example files:</p>
-<a href="https://github.com/Y4nareth/ShinyApp_EDM/tree/main/files" target="_blank">https://github.com/Y4nareth/ShinyApp_EDM/tree/main/files</a>'
+<a href="https://github.com/Y4nareth/ShinyApp_EDM" target="_blank">https://github.com/Y4nareth/ShinyApp_EDM</a>'
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
