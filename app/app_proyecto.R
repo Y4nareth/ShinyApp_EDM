@@ -23,7 +23,7 @@ require(shinycssloaders)
 require(dplyr)
 require(fastAdaboost)
 require(shinyWidgets)
-require(RWeka)
+require(farff)
 require(shinyalert)
 
 jscode = 'shinyjs.closeWindow = function(){ window.close();}'
@@ -150,7 +150,7 @@ server <- function(input, output) {
         
         } else {
             if (strsplit(input$file1$datapath,".",fixed = TRUE)[[1]][2] == "arff") {
-                df <- read.arff(input$file1$datapath)
+                df <- readARFF(input$file1$datapath)
             }
         }
         
