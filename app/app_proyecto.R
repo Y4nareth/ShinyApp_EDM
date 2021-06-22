@@ -92,7 +92,7 @@ ui <- fluidPage(
             # Horizontal line ----
             tags$hr(style = "border-top: 2px solid #000000;"),
             
-            fileInput("file2", "Select an instance in a csv file to classificate: ",
+            fileInput("file2", "Select an instance in a csv file to classify: ",
                       multiple = FALSE,
                       accept = c(".csv")),
             
@@ -129,7 +129,10 @@ ui <- fluidPage(
     useShinyjs(),
     extendShinyjs(text = jscode, functions = c("closeWindow")),
     actionButton("close", tags$strong("Close window"),
-                 style="color:black;background-color:#C53800", width = "23.8%")
+                 style="color:black;background-color:#C53800", width = "23.8%"),
+    
+    tags$footer("Created by Andrés Calandín & Jose Giner",align="right",
+                style="font-size:16px;")
     
 )
 
