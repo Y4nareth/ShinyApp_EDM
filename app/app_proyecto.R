@@ -131,7 +131,7 @@ ui <- fluidPage(
     actionButton("close", tags$strong("Close window"),
                  style="color:black;background-color:#C53800", width = "23.8%"),
     
-    tags$footer("Created by Andrés Calandín & Jose Giner",align="right",
+    tags$footer("Created by Andres Calandin & Jose Giner",align="right",
                 style="font-size:16px;")
     
 )
