@@ -1,7 +1,7 @@
 # ShinyApp
 
 Repository with the application script and the example files used to test the app.
-This is a class proyect, so it have not an advance scripting level.
+This prject has been made in the framework of the subject Model evaluation, display and monitoring. So, it have not an advance scripting level.
 
 The application itself get a .csv or .arff file with the following conditions:
 
